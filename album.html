@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Album</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url(https://scontent.fhan3-4.fna.fbcdn.net/v/t39.30808-6/470677724_900782865499303_2892541897873115760_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oMt8_ZTU0ykQ7kNvgFxTvfj&_nc_oc=AdjK_4NhI3RwU_M3_WRaP8chCo_B9HvGTgI-DdJsKsVz96O36P9eUM_D9WIzZZA6db-V054YCS5F2g6cbqtYMaVv&_nc_zt=23&_nc_ht=scontent.fhan3-4.fna&_nc_gid=ADFGtu4eC4CFqdbKfWK9-Aw&oh=00_AYBpXvUZ5zlzsU_oNpPo4D8u2Vw6QZB3idpoTBfk2T6vUQ&oe=6768BE25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .gallery-header h1 {
+            font-size: 2.5em;
+            color: #333;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            filter: brightness(1.2);
+        }
+
+        .gallery img:active {
+            transform: scale(1.05) rotate(-2deg);
+            filter: brightness(1.1);
+        }
+
+        .gallery img::after {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery-header">
+            <h1>My Album</h1>
+        </div>
+        <div class="gallery">
+            <img src="nnn.jpg" alt="Photo 1">
+            <img src="2.jpg" alt="Photo 2">
+            <img src="9.jpg" alt="Photo 3">
+            <img src="4.jpg" alt="Photo 4">
+            <img src="5.jpg" alt="Photo 5">
+           <!--  <img src="6.jpg" alt="Photo 6">
+            <img src="10.jpg" alt="Photo 7">
+            <img src="8.jpg" alt="Photo 8">
+            <img src="9.jpg" alt="Photo 9"> -->
+        </div>
+    </div>
+
+</body>
+</html>
